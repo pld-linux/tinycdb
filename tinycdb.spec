@@ -2,7 +2,7 @@ Summary:	A package for maintenance of constant databases
 Summary(pl):    Sta³a baza danych
 Name:		tinycdb
 Version:	0.7
-Release:	1
+Release:	2
 License:	Public Domain
 Group:		Applications/Databases
 Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}-%version.tar.gz
@@ -23,12 +23,24 @@ structure is tuned for fast reading:
  - Fast creation of new databases.
  - No locking, updates are atomical.
 
-This package contains both the utility and the development files.
+This package contains the utility.
 
 %description -l pl
-tinycdb jest szybkim, wiarygodnym, ma³ym pakietem do tworzenia i czytania
-sta³ych baz danych. Struktura bazy zosta³a zoptymalizowana do szybkiego
-odczytu.
+tinycdb jest szybkim, wiarygodnym, ma³ym pakietem do tworzenia i
+czytania sta³ych baz danych. Struktura bazy zosta³a zoptymalizowana do
+szybkiego odczytu:
+
+- Udane odwo³ania normalnie potrzebuj± tylko dwóch odwo³añ do dysku.
+- Nieudane odwo³ania potrzebuj± tylko jednego odwo³ania do dysku.
+- Ma³e wymagania co do miejsca do dysku i pamiêci; baza danych u¿ywa
+  2048 bajtów na nag³ówek i 24 bajtów na rekord.
+- Maksymalny rozmiar bazy to 4GB; rozmiar pojedynczego rekordu nie ma
+  innych ograniczeñ.
+- Przeno¶ny format pliku.
+- Szybkie tworzenie nowych baz.
+- Nie ma blokowania, zmiany s± atomowe.
+
+Ten pakiet zawiera narzêdzie.
 
 %package devel
 Summary:        development libraries and header files for tinycdb
