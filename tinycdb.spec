@@ -45,24 +45,24 @@ Ten pakiet zawiera narzêdzie.
 %package devel
 Summary:        development libraries and header files for tinycdb
 Summary(de):    Entwicklungs-Libraries und Header-Dateien für tinycdb
-Summary(fr):    Bibliothèques de développement et en-têtes pour tinycdb 
+Summary(fr):    Bibliothèques de développement et en-têtes pour tinycdb
 Summary(pl):    Biblioteki i pliki nag³ówkowe dla tinycdb
 Summary(tr):    tinycdb için baþlýk dosyalarý ve geliþtirme kitaplýklarý
 Group:          Development/Libraries
 
 %description devel
-These are the development libraries and header files for tinycdb. 
-These are required if you plan to do development using the tinycdb 
+These are the development libraries and header files for tinycdb.
+These are required if you plan to do development using the tinycdb
 database.
 
 %description devel -l de
 Dies sind die Entwicklungs-Libraries und Header-Dateien für tinycdbr.
-Sie sind darauf angewiesen, wenn Sie vorhaben, die tinycdb für 
+Sie sind darauf angewiesen, wenn Sie vorhaben, die tinycdb für
 Entwicklungsarbeiten zu benutzen.
 
 %description devel -l fr
 Ce sont les librairies de développement et les fichiers d'en-tête pour
-tinycdb. Ceci est nécessaire si vous désirez développer en utilisant 
+tinycdb. Ceci est nécessaire si vous désirez développer en utilisant
 la base de données tinycdb.
 
 %description devel -l pl
