@@ -1,8 +1,8 @@
 Summary:	A package for maintenance of constant databases
 Summary(pl):    Sta³a baza danych
 Name:		tinycdb
-Version:	0.7
-Release:	2
+Version:	0.73
+Release:	1
 License:	Public Domain
 Group:		Applications/Databases
 Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}-%version.tar.gz
@@ -96,6 +96,7 @@ install cdb.5	$RPM_BUILD_ROOT%{_mandir}/man5
 rm -rf $RPM_BUILD_ROOT
 
 %files
+%doc ChangeLog
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man[15]/*
