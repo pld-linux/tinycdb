@@ -1,5 +1,5 @@
 Summary:	A package for maintenance of constant databases
-Summary(pl):    Sta³a baza danych
+Summary(pl):	Sta³a baza danych
 Name:		tinycdb
 Version:	0.73
 Release:	1
@@ -45,12 +45,12 @@ szybkiego odczytu:
 Ten pakiet zawiera narzêdzie.
 
 %package devel
-Summary:        development libraries and header files for tinycdb
-Summary(de):    Entwicklungs-Libraries und Header-Dateien für tinycdb
-Summary(fr):    Bibliothèques de développement et en-têtes pour tinycdb
-Summary(pl):    Biblioteki i pliki nag³ówkowe dla tinycdb
-Summary(tr):    tinycdb için baþlýk dosyalarý ve geliþtirme kitaplýklarý
-Group:          Development/Libraries
+Summary:	Development libraries and header files for tinycdb
+Summary(de):	Entwicklungs-Libraries und Header-Dateien für tinycdb
+Summary(fr):	Bibliothèques de développement et en-têtes pour tinycdb
+Summary(pl):	Biblioteki i pliki nag³ówkowe dla tinycdb
+Summary(tr):	tinycdb için baþlýk dosyalarý ve geliþtirme kitaplýklarý
+Group:		Development/Libraries
 
 %description devel
 These are the development libraries and header files for tinycdb.
