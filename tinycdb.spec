@@ -93,7 +93,7 @@ install lib*.a	$RPM_BUILD_ROOT%{_libdir}
 install cdb.1	$RPM_BUILD_ROOT%{_mandir}/man1
 install cdb.3	$RPM_BUILD_ROOT%{_mandir}/man3
 install cdb.5	$RPM_BUILD_ROOT%{_mandir}/man5
-	
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
