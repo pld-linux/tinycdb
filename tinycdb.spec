@@ -6,7 +6,7 @@ Release:	1
 License:	Public Domain
 Group:		Applications/Databases
 URL:		http://www.corpit.ru/mjt/tinycdb.html
-Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}-%version.tar.gz
+Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}-%{version}.tar.gz
 # Source0-md5:	4a751aad0ac3067a7b922c40e495d79e
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
