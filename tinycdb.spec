@@ -3,9 +3,9 @@ Summary(pl):    Sta³a baza danych
 Name:		tinycdb
 Version:	0.7
 Release:	1
-Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}-%version.tar.gz
 License:	Public Domain
 Group:		Applications/Databases
+Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}-%version.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,7 +29,6 @@ This package contains both the utility and the development files.
 tinycdb jest szybkim, wiarygodnym, ma³ym pakietem do tworzenia i czytania
 sta³ych baz danych. Struktura bazy zosta³a zoptymalizowana do szybkiego
 odczytu.
-
 
 %package devel
 Summary:        development libraries and header files for tinycdb
@@ -66,8 +65,9 @@ baþlýk dosyalarý ve kitaplýklar.
 %setup -q
 
 %build
-
-%{__make} CFLAGS="%{rpmcflags}"
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -80,6 +80,9 @@ install cdb.1	$RPM_BUILD_ROOT%{_mandir}/man1
 install cdb.3	$RPM_BUILD_ROOT%{_mandir}/man3
 install cdb.5	$RPM_BUILD_ROOT%{_mandir}/man5
 	
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
@@ -90,6 +93,3 @@ install cdb.5	$RPM_BUILD_ROOT%{_mandir}/man5
 %{_libdir}/lib*.a
 %{_mandir}/man3/*
 %{_includedir}/*
-
-%clean
-rm -rf $RPM_BUILD_ROOT
