@@ -14,16 +14,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 tinycdb is a small, fast and reliable utility set and subroutine
 library for creating and reading constant databases. The database
 structure is tuned for fast reading:
-
- - Successful lookups take normally just two disk accesses.
- - Unsuccessful lookups take only one disk access.
- - Small disk space and memory size requirements; a database uses 2048
-   bytes for the header and 24 bytes per record.
- - Maximum database size is 4GB; individual record size is not
-   otherwise limited.
- - Portable file format.
- - Fast creation of new databases.
- - No locking, updates are atomical.
+- Successful lookups take normally just two disk accesses.
+- Unsuccessful lookups take only one disk access.
+- Small disk space and memory size requirements; a database uses 2048
+  bytes for the header and 24 bytes per record.
+- Maximum database size is 4GB; individual record size is not
+  otherwise limited.
+- Portable file format.
+- Fast creation of new databases.
+- No locking, updates are atomical.
 
 This package contains the utility.
 
@@ -31,7 +30,6 @@ This package contains the utility.
 tinycdb jest szybkim, niezawodnym, ma³ym pakietem do tworzenia i
 czytania sta³ych baz danych. Struktura bazy zosta³a zoptymalizowana do
 szybkiego odczytu:
-
 - Udane odwo³ania normalnie potrzebuj± tylko dwóch odwo³añ do dysku.
 - Nieudane odwo³ania potrzebuj± tylko jednego odwo³ania do dysku.
 - Ma³e wymagania co do miejsca do dysku i pamiêci; baza danych u¿ywa
