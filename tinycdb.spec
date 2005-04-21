@@ -2,7 +2,7 @@ Summary:	A package for maintenance of constant databases
 Summary(pl):	Sta³a baza danych
 Name:		tinycdb
 Version:	0.74
-Release:	2
+Release:	4
 License:	Public Domain
 Group:		Applications/Databases
 URL:		http://www.corpit.ru/mjt/tinycdb.html
