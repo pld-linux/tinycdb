@@ -5,9 +5,9 @@ Version:	0.74
 Release:	4
 License:	Public Domain
 Group:		Applications/Databases
-URL:		http://www.corpit.ru/mjt/tinycdb.html
 Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}-%{version}.tar.gz
 # Source0-md5:	73a29c3ec6c1e5a07dc23ebd4b870bc9
+URL:		http://www.corpit.ru/mjt/tinycdb.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
