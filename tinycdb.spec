@@ -92,7 +92,7 @@ passwd, group i shadow.
 %setup -q
 
 %build
-%{__make} shared staticlib nss \
+%{__make} -j1 shared staticlib nss \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags}" \
 	NSS_USELIB="\$(SOLIB)"
