@@ -1,108 +1,138 @@
 Summary:	A package for maintenance of constant databases
 Summary(pl):	Sta³a baza danych
 Name:		tinycdb
-Version:	0.74
-Release:	4
+Version:	0.76
+Release:	1
 License:	Public Domain
 Group:		Applications/Databases
-Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}-%{version}.tar.gz
-# Source0-md5:	73a29c3ec6c1e5a07dc23ebd4b870bc9
+Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}_%{version}.tar.gz
+# Source0-md5:	77db6fa098b674819ba1e06689bc87e8
 URL:		http://www.corpit.ru/mjt/tinycdb.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-tinycdb is a small, fast and reliable utility set and subroutine
-library for creating and reading constant databases. The database
-structure is tuned for fast reading:
-- Successful lookups take normally just two disk accesses.
-- Unsuccessful lookups take only one disk access.
-- Small disk space and memory size requirements; a database uses 2048
-  bytes for the header and 24 bytes per record.
-- Maximum database size is 4GB; individual record size is not
-  otherwise limited.
-- Portable file format.
-- Fast creation of new databases.
-- No locking, updates are atomical.
+TinyCDB is a very fast and simple package for creating and reading
+constant data bases, a data structure introduced by Dan J. Bernstein
+in his cdb package. It may be used to speed up searches in a sequence
+of (key,value) pairs with very big number of records. Example usage is
+indexing a big list of users - where a search will require linear
+reading of a large /etc/passwd file, and for many other tasks. It's
+usage/API is similar to ones found in BerkeleyDB, gdbm and traditional
+*nix dbm/ndbm libraries, and is compatible in great extent to cdb-0.75
+package by Dan Bernstein.
 
-This package contains the utility.
+CDB is a constant database, that is, it cannot be updated at a
+runtime, only rebuilt. Rebuilding is atomic operation and is very
+fast - much faster than of many other similar packages. Once created,
+CDB may be queried, and a query takes very little time to complete.
+
+This package contains shared library and cdb utility.
 
 %description -l pl
-tinycdb jest szybkim, niezawodnym, ma³ym pakietem do tworzenia i
-czytania sta³ych baz danych. Struktura bazy zosta³a zoptymalizowana do
-szybkiego odczytu:
-- Udane odwo³ania normalnie potrzebuj± tylko dwóch odwo³añ do dysku.
-- Nieudane odwo³ania potrzebuj± tylko jednego odwo³ania do dysku.
-- Ma³e wymagania co do miejsca do dysku i pamiêci; baza danych u¿ywa
-  2048 bajtów na nag³ówek i 24 bajtów na rekord.
-- Maksymalny rozmiar bazy to 4GB; rozmiar pojedynczego rekordu nie ma
-  innych ograniczeñ.
-- Przeno¶ny format pliku.
-- Szybkie tworzenie nowych baz.
-- Nie ma blokowania, zmiany s± atomowe.
+tinycdb jest bardzo szybkim i prostym pakietem do tworzenia i czytania
+sta³ych baz danych o strukturze wprowadzonej przez Dana J. Bernsteina
+w jego pakiecie cdb. Mo¿e byæ u¿ywana do przyspieszenia wyszukiwania
+kolejnych par (klucz,warto¶æ) przy bardzo du¿ej liczbie rekordów.
+Przyk³adowe zastosowanie to indeksowanie du¿ej listy u¿ytkowników -
+gdzie wyszukiwanie wymaga³oby liniowego odczytu du¿ego pliku
+/etc/passwd. Sposób u¿ycia i API s± podobne do znanych z BerkeleyDB,
+gdbm czy tradycyjnych uniksowych bibliotek dbm/ndbm i s± kompatybilne
+w du¿ym stopniu z pakietem cdb-0.75 Dana Bernsteina.
 
-Ten pakiet zawiera narzêdzie.
+CDB to sta³a baza danych, co oznacza, ¿e nie mo¿na jej uaktualniaæ, a
+jedynie przebudowaæ od pocz±tku. Przebudowanie jest atomow± operacj± i
+jest bardzo szybkie - du¿o szybsze ni¿ w przypadku wielu innych
+podobnych pakietów. Po utworzeniu bazy CDB mo¿na wykonywaæ zapytania,
+których wykonanie jest bardzo szybkie.
+
+Ten pakiet zawiera bibliotekê wspó³dzielon± i narzêdzie cdb.
 
 %package devel
-Summary:	Development libraries and header files for tinycdb
-Summary(de):	Entwicklungs-Libraries und Header-Dateien für tinycdb
-Summary(fr):	Bibliothèques de développement et en-têtes pour tinycdb
-Summary(pl):	Biblioteki i pliki nag³ówkowe dla tinycdb
-Summary(tr):	tinycdb için baþlýk dosyalarý ve geliþtirme kitaplýklarý
+Summary:	Header file for tinycdb
+Summary(de):	Header-Datei für tinycdb
+Summary(pl):	Plik nag³ówkowy tinycdb
 Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
-These are the development libraries and header files for tinycdb.
-These are required if you plan to do development using the tinycdb
-database.
-
-%description devel -l de
-Dies sind die Entwicklungs-Libraries und Header-Dateien für tinycdbr.
-Sie sind darauf angewiesen, wenn Sie vorhaben, die tinycdb für
-Entwicklungsarbeiten zu benutzen.
-
-%description devel -l fr
-Ce sont les librairies de développement et les fichiers d'en-tête pour
-tinycdb. Ceci est nécessaire si vous désirez développer en utilisant
-la base de données tinycdb.
+This package contains the header file for tinycdb. It is required if
+you plan to do development using the tinycdb database.
 
 %description devel -l pl
-W pakiecie tym znajduj± siê pliki nag³ówkowe i biblioteki dla systemu
-bazy danych tinycdb.
+W pakiecie tym znajduje siê plik nag³ówkowy dla systemu bazy danych
+tinycdb. Jest potrzebny do programowania z u¿yciem tej bazy.
 
-%description devel -l tr
-GNU veri tabaný sistemi tinycdb ile program geliþtirmek için gereken
-baþlýk dosyalarý ve kitaplýklar.
+%package static
+Summary:	Static tinycdb library
+Summary(pl):	Statyczna biblioteka tinycdb
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
+
+%description static
+Static tinycdb library.
+
+%description static -l pl
+Statyczna biblioteka tinycdb.
+
+%package -n nss_tinycdb
+Summary:	NSS module which uses tinycdb database
+Summary(pl):	Modu³ NSS u¿ywaj±cy bazy danych tinycdb
+Group:		Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description -n nss_tinycdb
+NSS module which uses tinycdb database to keep passwd, group and
+shadow entries.
+
+%description -n nss_tinycdb -l pl
+Modu³ NSS u¿ywaj±cy bazy danych tinycdb do przechowywania wpisów
+passwd, group i shadow.
 
 %prep
 %setup -q
 
 %build
-%{__make} \
+%{__make} shared staticlib nss \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags}"
+	CFLAGS="%{rpmcflags}" \
+	NSS_USELIB="\$(SOLIB)"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_includedir},%{_libdir},%{_mandir}/man{1,3,5}}
 
-install cdb	$RPM_BUILD_ROOT%{_bindir}
-install cdb.h	$RPM_BUILD_ROOT%{_includedir}
-install lib*.a	$RPM_BUILD_ROOT%{_libdir}
-install cdb.1	$RPM_BUILD_ROOT%{_mandir}/man1
-install cdb.3	$RPM_BUILD_ROOT%{_mandir}/man3
-install cdb.5	$RPM_BUILD_ROOT%{_mandir}/man5
+%{__make} install install-sharedlib install-nss \
+	DESTDIR=$RPM_BUILD_ROOT \
+	prefix=%{_prefix} \
+	libdir=%{_libdir} \
+	mandir=%{_mandir} \
+	syslibdir=/%{_lib} \
+	INSTALLPROG=cdb-shared
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man[15]/*
+%doc ChangeLog NEWS
+%attr(755,root,root) %{_bindir}/cdb
+%attr(755,root,root) %{_libdir}/libcdb.so.*
+%{_mandir}/man1/cdb.1*
+%{_mandir}/man5/cdb.5*
 
 %files devel
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
-%{_mandir}/man3/*
-%{_includedir}/*
+%attr(755,root,root) %{_libdir}/libcdb.so
+%{_mandir}/man3/cdb.3*
+%{_includedir}/cdb.h
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/libcdb.a
+
+%files -n nss_tinycdb
+%defattr(644,root,root,755)
+%attr(755,root,root) /%{_lib}/libnss_cdb.so.2
+/etc/cdb-Makefile
