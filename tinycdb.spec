@@ -1,5 +1,5 @@
 Summary:	A package for maintenance of constant databases
-Summary(pl.UTF-8):   Stała baza danych
+Summary(pl.UTF-8):	Stała baza danych
 Name:		tinycdb
 Version:	0.76
 Release:	1
@@ -49,8 +49,8 @@ Ten pakiet zawiera bibliotekę współdzieloną i narzędzie cdb.
 
 %package devel
 Summary:	Header file for tinycdb
-Summary(de.UTF-8):   Header-Datei für tinycdb
-Summary(pl.UTF-8):   Plik nagłówkowy tinycdb
+Summary(de.UTF-8):	Header-Datei für tinycdb
+Summary(pl.UTF-8):	Plik nagłówkowy tinycdb
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -64,7 +64,7 @@ tinycdb. Jest potrzebny do programowania z użyciem tej bazy.
 
 %package static
 Summary:	Static tinycdb library
-Summary(pl.UTF-8):   Statyczna biblioteka tinycdb
+Summary(pl.UTF-8):	Statyczna biblioteka tinycdb
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -76,7 +76,7 @@ Statyczna biblioteka tinycdb.
 
 %package -n nss_tinycdb
 Summary:	NSS module which uses tinycdb database
-Summary(pl.UTF-8):   Moduł NSS używający bazy danych tinycdb
+Summary(pl.UTF-8):	Moduł NSS używający bazy danych tinycdb
 Group:		Libraries
 Requires:	%{name} = %{version}-%{release}
 
