@@ -1,5 +1,5 @@
 Summary:	A package for maintenance of constant databases
-Summary(pl):	Sta³a baza danych
+Summary(pl.UTF-8):   StaÅ‚a baza danych
 Name:		tinycdb
 Version:	0.76
 Release:	1
@@ -28,29 +28,29 @@ CDB may be queried, and a query takes very little time to complete.
 
 This package contains shared library and cdb utility.
 
-%description -l pl
+%description -l pl.UTF-8
 tinycdb jest bardzo szybkim i prostym pakietem do tworzenia i czytania
-sta³ych baz danych o strukturze wprowadzonej przez Dana J. Bernsteina
-w jego pakiecie cdb. Mo¿e byæ u¿ywana do przyspieszenia wyszukiwania
-kolejnych par (klucz,warto¶æ) przy bardzo du¿ej liczbie rekordów.
-Przyk³adowe zastosowanie to indeksowanie du¿ej listy u¿ytkowników -
-gdzie wyszukiwanie wymaga³oby liniowego odczytu du¿ego pliku
-/etc/passwd. Sposób u¿ycia i API s± podobne do znanych z BerkeleyDB,
-gdbm czy tradycyjnych uniksowych bibliotek dbm/ndbm i s± kompatybilne
-w du¿ym stopniu z pakietem cdb-0.75 Dana Bernsteina.
+staÅ‚ych baz danych o strukturze wprowadzonej przez Dana J. Bernsteina
+w jego pakiecie cdb. MoÅ¼e byÄ‡ uÅ¼ywana do przyspieszenia wyszukiwania
+kolejnych par (klucz,wartoÅ›Ä‡) przy bardzo duÅ¼ej liczbie rekordÃ³w.
+PrzykÅ‚adowe zastosowanie to indeksowanie duÅ¼ej listy uÅ¼ytkownikÃ³w -
+gdzie wyszukiwanie wymagaÅ‚oby liniowego odczytu duÅ¼ego pliku
+/etc/passwd. SposÃ³b uÅ¼ycia i API sÄ… podobne do znanych z BerkeleyDB,
+gdbm czy tradycyjnych uniksowych bibliotek dbm/ndbm i sÄ… kompatybilne
+w duÅ¼ym stopniu z pakietem cdb-0.75 Dana Bernsteina.
 
-CDB to sta³a baza danych, co oznacza, ¿e nie mo¿na jej uaktualniaæ, a
-jedynie przebudowaæ od pocz±tku. Przebudowanie jest atomow± operacj± i
-jest bardzo szybkie - du¿o szybsze ni¿ w przypadku wielu innych
-podobnych pakietów. Po utworzeniu bazy CDB mo¿na wykonywaæ zapytania,
-których wykonanie jest bardzo szybkie.
+CDB to staÅ‚a baza danych, co oznacza, Å¼e nie moÅ¼na jej uaktualniaÄ‡, a
+jedynie przebudowaÄ‡ od poczÄ…tku. Przebudowanie jest atomowÄ… operacjÄ… i
+jest bardzo szybkie - duÅ¼o szybsze niÅ¼ w przypadku wielu innych
+podobnych pakietÃ³w. Po utworzeniu bazy CDB moÅ¼na wykonywaÄ‡ zapytania,
+ktÃ³rych wykonanie jest bardzo szybkie.
 
-Ten pakiet zawiera bibliotekê wspó³dzielon± i narzêdzie cdb.
+Ten pakiet zawiera bibliotekÄ™ wspÃ³Å‚dzielonÄ… i narzÄ™dzie cdb.
 
 %package devel
 Summary:	Header file for tinycdb
-Summary(de):	Header-Datei für tinycdb
-Summary(pl):	Plik nag³ówkowy tinycdb
+Summary(de.UTF-8):   Header-Datei fÃ¼r tinycdb
+Summary(pl.UTF-8):   Plik nagÅ‚Ã³wkowy tinycdb
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -58,25 +58,25 @@ Requires:	%{name} = %{version}-%{release}
 This package contains the header file for tinycdb. It is required if
 you plan to do development using the tinycdb database.
 
-%description devel -l pl
-W pakiecie tym znajduje siê plik nag³ówkowy dla systemu bazy danych
-tinycdb. Jest potrzebny do programowania z u¿yciem tej bazy.
+%description devel -l pl.UTF-8
+W pakiecie tym znajduje siÄ™ plik nagÅ‚Ã³wkowy dla systemu bazy danych
+tinycdb. Jest potrzebny do programowania z uÅ¼yciem tej bazy.
 
 %package static
 Summary:	Static tinycdb library
-Summary(pl):	Statyczna biblioteka tinycdb
+Summary(pl.UTF-8):   Statyczna biblioteka tinycdb
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static tinycdb library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka tinycdb.
 
 %package -n nss_tinycdb
 Summary:	NSS module which uses tinycdb database
-Summary(pl):	Modu³ NSS u¿ywaj±cy bazy danych tinycdb
+Summary(pl.UTF-8):   ModuÅ‚ NSS uÅ¼ywajÄ…cy bazy danych tinycdb
 Group:		Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -84,8 +84,8 @@ Requires:	%{name} = %{version}-%{release}
 NSS module which uses tinycdb database to keep passwd, group and
 shadow entries.
 
-%description -n nss_tinycdb -l pl
-Modu³ NSS u¿ywaj±cy bazy danych tinycdb do przechowywania wpisów
+%description -n nss_tinycdb -l pl.UTF-8
+ModuÅ‚ NSS uÅ¼ywajÄ…cy bazy danych tinycdb do przechowywania wpisÃ³w
 passwd, group i shadow.
 
 %prep
