@@ -1,12 +1,12 @@
 Summary:	A package for maintenance of constant databases
 Summary(pl.UTF-8):	Stała baza danych
 Name:		tinycdb
-Version:	0.76
-Release:	2
+Version:	0.77
+Release:	1
 License:	Public Domain
 Group:		Applications/Databases
 Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}_%{version}.tar.gz
-# Source0-md5:	77db6fa098b674819ba1e06689bc87e8
+# Source0-md5:	c00e5fb96c30356ac3b67b2ab5d5641b
 URL:		http://www.corpit.ru/mjt/tinycdb.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
