@@ -2,7 +2,7 @@ Summary:	A package for maintenance of constant databases
 Summary(pl.UTF-8):	Stała baza danych
 Name:		tinycdb
 Version:	0.77
-Release:	1
+Release:	2
 License:	Public Domain
 Group:		Applications/Databases
 Source0:	ftp://ftp.corpit.ru/pub/tinycdb/%{name}_%{version}.tar.gz
