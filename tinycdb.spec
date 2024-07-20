@@ -1,13 +1,13 @@
 Summary:	A package for maintenance of constant databases
 Summary(pl.UTF-8):	Stała baza danych
 Name:		tinycdb
-Version:	0.78
+Version:	0.81
 Release:	1
-License:	Public Domain
+License:	MIT
 Group:		Applications/Databases
 #Source0Download: http://www.corpit.ru/mjt/tinycdb.html#download
 Source0:	http://www.corpit.ru/mjt/tinycdb/%{name}-%{version}.tar.gz
-# Source0-md5:	976266afc3f6e7e17492a8d18f21f8f6
+# Source0-md5:	4017d5f938af396535ff1ec3d4ad5ba8
 URL:		http://www.corpit.ru/mjt/tinycdb.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -117,7 +117,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS debian/{changelog,copyright}
+%doc LICENSE NEWS
 %attr(755,root,root) %{_bindir}/cdb
 %attr(755,root,root) %{_libdir}/libcdb.so.1
 %{_mandir}/man1/cdb.1*
@@ -128,6 +128,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libcdb.so
 %{_mandir}/man3/cdb.3*
 %{_includedir}/cdb.h
+%{_pkgconfigdir}/libcdb.pc
 
 %files static
 %defattr(644,root,root,755)
